@@ -9,11 +9,10 @@
 name: CodeScan
 
 on:
+  workflow_dispatch:
   push:
-    branches: [ $default-branch, $protected-branches ]
-  pull_request:
-    # The branches below must be a subset of the branches above
-    branches: [ $default-branch ]
+    branches:
+    - none
 
 permissions:
   contents: read
